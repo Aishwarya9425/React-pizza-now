@@ -5,22 +5,26 @@ import Cart from "./features/cart/Cart";
 import CreateOrder from "./features/order/CreateOrder";
 import Order from "./features/order/Order";
 import AppLayout from "./ui/AppLayout";
+import Error from "./ui/Error";
 
 // React Router
-// data fetching is fired from the router 
+// data fetching is fired from the router
+// create loader, provide loader here in routes,
+
 const router = createBrowserRouter([
   {
     element: <AppLayout />, //parent route - has header and cartOverview
+    errorElement: <Error />,
     children: [
       {
         path: "/",
         element: <Home />,
       },
-      // create loader, provide loader here in routes,
       {
         path: "/menu",
         element: <Menu />,
         loader: menuLoader,
+        errorElement: <Error />,
       },
       {
         path: "/cart",
