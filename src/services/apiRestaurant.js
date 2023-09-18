@@ -18,6 +18,7 @@ export async function getOrder(id) {
   return data;
 }
 
+//new order after submitting the form 
 export async function createOrder(newOrder) {
   try {
     const res = await fetch(`${API_URL}/order`, {
