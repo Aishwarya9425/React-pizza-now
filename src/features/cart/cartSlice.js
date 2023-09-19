@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   cart: [],
 
-  //derive other states from cart array
   // cart: [
   //   {
   //     pizzaId: 12,
